@@ -171,4 +171,17 @@ body {
   .product-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
+  .App {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
 }

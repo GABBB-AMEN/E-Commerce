@@ -1,0 +1,255 @@
+[
+  {
+    "id": 1,
+    "name": "MacBook Pro 16\"",
+    "price": 89999,
+    "originalPrice": 99999,
+    "image": "macbook-pro.jpg",
+    "description": "16-inch MacBook Pro with M3 Pro chip, 18GB RAM, 1TB SSD. Perfect for professionals and creatives.",
+    "category": "Laptops",
+    "brand": "Apple",
+    "inStock": true,
+    "rating": 4.8,
+    "reviewCount": 124,
+    "features": ["M3 Pro Chip", "18GB RAM", "1TB SSD", "16-core GPU", "Liquid Retina XDR Display"],
+    "specifications": {
+      "screen": "16.2-inch Liquid Retina XDR",
+      "processor": "Apple M3 Pro",
+      "memory": "18GB Unified Memory",
+      "storage": "1TB SSD",
+      "graphics": "18-core GPU"
+    }
+  },
+  {
+    "id": 2,
+    "name": "iPhone 15 Pro",
+    "price": 64999,
+    "originalPrice": 69999,
+    "image": "iphone-15-pro.jpg",
+    "description": "iPhone 15 Pro with Titanium design, A17 Pro chip, and advanced camera system.",
+    "category": "Smartphones",
+    "brand": "Apple",
+    "inStock": true,
+    "rating": 4.7,
+    "reviewCount": 89,
+    "features": ["Titanium Design", "A17 Pro Chip", "48MP Main Camera", "5G", "Face ID"],
+    "specifications": {
+      "screen": "6.1-inch Super Retina XDR",
+      "processor": "A17 Pro",
+      "storage": "128GB",
+      "camera": "48MP Main + 12MP Ultra Wide + 12MP Telephoto",
+      "battery": "Up to 23 hours video playback"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Sony WH-1000XM5",
+    "price": 15999,
+    "originalPrice": 17999,
+    "image": "sony-headphones.jpg",
+    "description": "Industry-leading noise canceling with 30-hour battery life and exceptional sound quality.",
+    "category": "Headphones",
+    "brand": "Sony",
+    "inStock": true,
+    "rating": 4.6,
+    "reviewCount": 67,
+    "features": ["Noise Canceling", "30-hour Battery", "Touch Controls", "Quick Charge", "Hi-Fi Sound"],
+    "specifications": {
+      "battery": "30 hours with ANC",
+      "charging": "3-hour playback in 3 minutes",
+      "connectivity": "Bluetooth 5.2",
+      "weight": "250g",
+      "microphones": "8 mics for calls"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Samsung Odyssey G9",
+    "price": 45999,
+    "originalPrice": 49999,
+    "image": "samsung-monitor.jpg",
+    "description": "49-inch Dual QHD gaming monitor with 240Hz refresh rate and QLED technology.",
+    "category": "Monitors",
+    "brand": "Samsung",
+    "inStock": false,
+    "rating": 4.5,
+    "reviewCount": 42,
+    "features": ["49-inch Curved", "240Hz Refresh", "QLED Display", "1ms Response", "HDR1000"],
+    "specifications": {
+      "screen": "49-inch Dual QHD (5120x1440)",
+      "refreshRate": "240Hz",
+      "responseTime": "1ms",
+      "panel": "QLED",
+      "curvature": "1000R"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Logitech MX Keys",
+    "price": 4999,
+    "originalPrice": 5999,
+    "image": "logitech-keyboard.jpg",
+    "description": "Wireless illuminated keyboard with smart backlighting and comfortable, precise typing.",
+    "category": "Keyboards",
+    "brand": "Logitech",
+    "inStock": true,
+    "rating": 4.4,
+    "reviewCount": 156,
+    "features": ["Wireless", "Backlit Keys", "Multi-Device", "USB-C Charging", "Mac/Win Compatible"],
+    "specifications": {
+      "connectivity": "Bluetooth & 2.4GHz",
+      "battery": "Up to 10 days backlit",
+      "layout": "Full-size",
+      "backlight": "Smart backlighting",
+      "compatibility": "Windows, macOS, Linux, iOS, Android"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Logitech MX Master 3S",
+    "price": 3999,
+    "originalPrice": 4499,
+    "image": "logitech-mouse.jpg",
+    "description": "Wireless mouse with ultra-fast scrolling, ergonomic design, and multi-computer flow.",
+    "category": "Mice",
+    "brand": "Logitech",
+    "inStock": true,
+    "rating": 4.7,
+    "reviewCount": 203,
+    "features": ["Wireless", "Ergonomic", "Fast Scrolling", "Multi-Device", "Precision Tracking"],
+    "specifications": {
+      "sensor": "Darkfield High Precision",
+      "connectivity": "Bluetooth & 2.4GHz",
+      "battery": "Up to 70 days",
+      "buttons": "7 programmable",
+      "scroll": "MagSpeed electromagnetic"
+    }
+  },
+  {
+    "id": 7,
+    "name": "iPad Pro 12.9\"",
+    "price": 54999,
+    "originalPrice": 59999,
+    "image": "ipad-pro.jpg",
+    "description": "12.9-inch iPad Pro with M2 chip, Liquid Retina XDR display, and Pro-level performance.",
+    "category": "Tablets",
+    "brand": "Apple",
+    "inStock": true,
+    "rating": 4.6,
+    "reviewCount": 78,
+    "features": ["M2 Chip", "Liquid Retina XDR", "5G Cellular", "Face ID", "Pro Camera System"],
+    "specifications": {
+      "screen": "12.9-inch Liquid Retina XDR",
+      "processor": "Apple M2",
+      "storage": "128GB",
+      "camera": "12MP Wide + 10MP Ultra Wide",
+      "battery": "Up to 10 hours"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Canon EOS R6",
+    "price": 129999,
+    "originalPrice": 139999,
+    "image": "canon-camera.jpg",
+    "description": "Full-frame mirrorless camera with 20MP sensor, 4K video, and advanced autofocus.",
+    "category": "Cameras",
+    "brand": "Canon",
+    "inStock": true,
+    "rating": 4.8,
+    "reviewCount": 34,
+    "features": ["Full-frame", "20MP Sensor", "4K 60p Video", "IBIS", "Dual Pixel AF II"],
+    "specifications": {
+      "sensor": "20.1MP Full-frame CMOS",
+      "video": "4K 60p",
+      "stabilization": "In-body 8-stop",
+      "autofocus": "Dual Pixel CMOS AF II",
+      "burst": "Up to 20 fps electronic"
+    }
+  },
+  {
+    "id": 9,
+    "name": "DJI Mini 3 Pro",
+    "price": 42999,
+    "originalPrice": 45999,
+    "image": "dji-drone.jpg",
+    "description": "Lightweight drone with 4K HDR video, tri-directional obstacle sensing, and 34-minute flight time.",
+    "category": "Drones",
+    "brand": "DJI",
+    "inStock": true,
+    "rating": 4.5,
+    "reviewCount": 56,
+    "features": ["4K HDR Video", "Obstacle Sensing", "34-min Flight", "Lightweight", "Vertical Shooting"],
+    "specifications": {
+      "camera": "1/1.3-inch CMOS, 48MP",
+      "video": "4K/60fps HDR",
+      "weight": "<249g",
+      "flightTime": "34 minutes",
+      "sensing": "Tri-directional obstacle sensing"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Apple Watch Series 9",
+    "price": 23999,
+    "originalPrice": 25999,
+    "image": "apple-watch.jpg",
+    "description": "Smartwatch with S9 chip, advanced health monitoring, and always-on retina display.",
+    "category": "Smartwatches",
+    "brand": "Apple",
+    "inStock": true,
+    "rating": 4.4,
+    "reviewCount": 145,
+    "features": ["S9 Chip", "Health Monitoring", "Always-on Display", "GPS", "Water Resistant"],
+    "specifications": {
+      "display": "Always-on Retina",
+      "processor": "Apple S9",
+      "battery": "Up to 18 hours",
+      "health": "ECG, Blood Oxygen, Heart Rate",
+      "waterResistance": "50 meters"
+    }
+  },
+  {
+    "id": 11,
+    "name": "PlayStation 5",
+    "price": 27999,
+    "originalPrice": 29999,
+    "image": "ps5.jpg",
+    "description": "Next-gen gaming console with ultra-high speed SSD and immersive 4K gaming.",
+    "category": "Gaming Consoles",
+    "brand": "Sony",
+    "inStock": false,
+    "rating": 4.9,
+    "reviewCount": 89,
+    "features": ["4K Gaming", "Ultra-high Speed SSD", "Ray Tracing", "Backward Compatible", "3D Audio"],
+    "specifications": {
+      "processor": "AMD Zen 2, 8-core",
+      "gpu": "AMD RDNA 2, 10.28 TFLOPs",
+      "memory": "16GB GDDR6",
+      "storage": "825GB SSD",
+      "output": "4K 120Hz, 8K"
+    }
+  },
+ {
+  "id": 12,
+  "name": "iPhone 17 Pro Max",
+  "price": 89999,
+  "originalPrice": 94999,
+  "image": "iphone-17-pro-max.jpg",
+  "description": "The future of smartphone technology with A19 Bionic chip, under-display Face ID, holographic display, and week-long battery life. Experience the next generation of mobile innovation.",
+  "category": "Smartphones",
+  "brand": "Apple",
+  "inStock": true,
+  "rating": 4.9,
+  "reviewCount": 342,
+  "features": ["A19 Bionic Chip", "Under-Display Face ID", "Holographic Display", "7-Day Battery Life", "Satellite Connectivity", "Neural Interface"],
+  "specifications": {
+    "screen": "6.9-inch Holographic ProMotion XDR",
+    "processor": "Apple A19 Bionic with 6-core CPU",
+    "storage": "1TB/2TB Options",
+    "camera": "Quad 108MP System with LiDAR 3.0",
+    "battery": "Up to 7 days normal use",
+    "connectivity": "6G, Wi-Fi 7, Satellite Link"
+  }
+}
+]

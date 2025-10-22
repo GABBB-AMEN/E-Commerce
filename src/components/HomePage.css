@@ -51,7 +51,7 @@
   background-color: #E1E1E1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; 
 }
 
 .featured-section h2 {
@@ -62,8 +62,9 @@
   margin-bottom: 30px;
   font-family: "Jersey 25", sans-serif;
   font-size: 1.75rem;
+  align-self: flex-start; 
+  margin-left: 230px; 
 }
-
 
 .product-grid {
   display: grid;
@@ -73,6 +74,7 @@
   margin: 0 auto;
   padding: 16px;
   box-sizing: border-box;
+  width: 100%; 
 }
 
 .product-card {
@@ -99,8 +101,19 @@
   object-fit: cover;
   border-radius: 10px;
   background-color: #f8f8f8;
+  background-image: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
+                    linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
+                    linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
+                    linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
 }
 
+
+.product-card img:not([src]),
+.product-card img[src=""] {
+  background-color: #e0e0e0;
+}
 
 .product-name {
   font-weight: bold;
@@ -148,6 +161,20 @@
   .banner-text p {
     font-size: 0.9rem;
   }
+  .out-of-stock {
+  color: #ff4444;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.product-card {
+  position: relative;
+}
+
+.product-card:has(.out-of-stock) img {
+  opacity: 0.7;
+}
 }
 
 @media (max-width: 1200px) {

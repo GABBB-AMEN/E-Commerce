@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FaShoppingCart, FaUser, FaSearch } from "react-icons/fa";
 
@@ -6,13 +7,21 @@ const Navbar = () => {
   return (
     <div className="nav-outer">
       <div className="nav-inner">
-        <div className="logo">
+        <Link to="/" className="logo">
           <span>e</span>Store
-        </div>
+        </Link>
 
         <ul className="nav-links">
-          <li>HOME</li>
-          <li>CATEGORIES</li>
+          <li>
+            <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+              HOME
+            </Link>
+          </li>
+          <li>
+            <Link to="/categories" style={{ textDecoration: 'none', color: 'inherit' }}>
+              CATEGORIES
+            </Link>
+          </li>
         </ul>
 
         <div className="nav-right">

@@ -1,26 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
+import productData from "../data/product.json";
 
 function HomePage() {
+  const navigate = useNavigate();
+  const [featuredProducts, setFeaturedProducts] = useState([]);
 
-  const products = [
-    { id: 1, name: "LAPTOP", price: "₱49,999", image: "/laptop.jpg" },
-    { id: 2, name: "LAPTOP", price: "₱49,999", image: "/laptop.jpg" },
-    { id: 3, name: "LAPTOP", price: "₱49,999", image: "/laptop.jpg" },
-    { id: 4, name: "LAPTOP", price: "₱49,999", image: "/laptop.jpg" },
-    { id: 5, name: "LAPTOP", price: "₱49,999", image: "/laptop.jpg" },
-    { id: 6, name: "LAPTOP", price: "₱49,999", image: "/laptop.jpg" },
-    { id: 7, name: "LAPTOP", price: "₱49,999", image: "/laptop.jpg" },
-    { id: 8, name: "LAPTOP", price: "₱49,999", image: "/laptop.jpg" },
-    { id: 9, name: "LAPTOP", price: "₱49,999", image: "/laptop.jpg" },
-    { id: 10, name: "LAPTOP", price: "₱49,999", image: "/laptop.jpg" },
-    { id: 11, name: "LAPTOP", price: "₱49,999", image: "/laptop.jpg" },
-    { id: 12, name: "LAPTOP", price: "₱49,999", image: "/laptop.jpg" },
-  ];
+  useEffect(() => {
+    // Get first 8 products as featured products
+    setFeaturedProducts(productData.slice(0, 12));
+  }, []);
+
+  const handleShopNow = () => {
+    navigate("/categories");
+  };
+
+  const formatPrice = (price) => {
+    return `₱${price.toLocaleString()}`;
+  };
 
   return (
     <div className="homepage">
-      {}
       <div
         className="home-banner"
         style={{
@@ -31,19 +32,21 @@ function HomePage() {
         }}
       >
         <div className="banner-button-container">
-          <button className="shop-now-btn">SHOP NOW</button>
+          <button className="shop-now-btn" onClick={handleShopNow}>
+            SHOP NOW
+          </button>
         </div>
       </div>
 
-      {}
       <section className="featured-section">
         <h2>FEATURED PRODUCTS</h2>
         <div className="product-grid">
-          {products.map((product) => (
+          {featuredProducts.map((product) => (
             <div key={product.id} className="product-card">
               <img src={product.image} alt={product.name} />
               <div className="product-name">{product.name}</div>
-              <div className="product-price">{product.price}</div>
+              <div className="product-price">{formatPrice(product.price)}</div>
+              {!product.inStock && <div className="out-of-stock">Out of Stock</div>}
             </div>
           ))}
         </div>
