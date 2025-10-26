@@ -1,0 +1,2 @@
+- [x] Make product cards in HomePage.js clickable to navigate to product details
+- [x] Fix image src paths in HomePage.js to load from public folder

@@ -8,12 +8,16 @@ function HomePage() {
   const [featuredProducts, setFeaturedProducts] = useState([]);
 
   useEffect(() => {
-    // Get first 8 products as featured products
     setFeaturedProducts(productData.slice(0, 12));
   }, []);
 
   const handleShopNow = () => {
     navigate("/categories");
+  };
+
+  // NEW: Handle product card click
+  const handleProductClick = (productId) => {
+    navigate(`/product/${productId}`);
   };
 
   const formatPrice = (price) => {
@@ -42,8 +46,19 @@ function HomePage() {
         <h2>FEATURED PRODUCTS</h2>
         <div className="product-grid">
           {featuredProducts.map((product) => (
-            <div key={product.id} className="product-card">
-              <img src={product.image} alt={product.name} />
+            <div 
+              key={product.id} 
+              className="product-card"
+              onClick={() => handleProductClick(product.id)} // NEW: Click handler
+              style={{ cursor: 'pointer' }} // NEW: Show pointer cursor
+            >
+              <img 
+                src={product.image} 
+                alt={product.name}
+                onError={(e) => {
+                  e.target.src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk5vIEltYWdlPC90ZXh0Pjwvc3ZnPg==";
+                }}
+              />
               <div className="product-name">{product.name}</div>
               <div className="product-price">{formatPrice(product.price)}</div>
               {!product.inStock && <div className="out-of-stock">Out of Stock</div>}
