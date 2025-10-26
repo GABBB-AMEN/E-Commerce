@@ -112,3 +112,16 @@
   .search-pill { width: 160px; }
   .nav-links { display: none; }
 }
+
+
+/* Cart  */
+.nav-links a,
+.icon-circle {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.icon-circle:hover {
+  color: #f57c00; /* orange hover if you want */
+}

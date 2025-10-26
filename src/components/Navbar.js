@@ -32,8 +32,10 @@ const Navbar = () => {
           <div className="icon-circle" title="Account">
             <FaUser />
           </div>
-          <div className="icon-circle" title="Cart">
-            <FaShoppingCart />
+          <div className="icon-section">
+              <Link to="/cart" className="icon-circle" title="Cart">
+                <FaShoppingCart />
+              </Link>
           </div>
         </div>
       </div>

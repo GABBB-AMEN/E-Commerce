@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
 import productData from "../data/product.json";
+import { useCart } from "../context/CartContext";
+
 
 function HomePage() {
   const navigate = useNavigate();
