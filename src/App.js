@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";
 import Categories from "./components/Categories";
@@ -8,26 +8,35 @@ import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import { CartProvider } from "./context/CartContext";
 import "./App.css";
+import LoginPanel from "./components/LoginPanel";
+
+function AppContent() {
+  const location = useLocation()
+const hideNavbar = location.pathname === "/login"
+
+return (
+  <div className="App">
+    {hideNavbar ? null : <Navbar />}
+      <Routes>
+        <Route path="/login" element={<LoginPanel />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+      </Routes>
+  </div>
+  )
+}
 
 function App() {
   return (
     <CartProvider>
-
       <Router>
-        <div className="App">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/categories" element={<Categories />} />
-            <Route path="/product/:id" element={<ProductDetails />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<Checkout />} />
-          </Routes>
-        </div>
+        <AppContent />
       </Router>
-
     </CartProvider>
-  );
+  )
 }
 
 export default App;

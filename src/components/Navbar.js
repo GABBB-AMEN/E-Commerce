@@ -29,9 +29,10 @@ const Navbar = () => {
             <input type="text" placeholder=" " aria-label="search" />
           </div>
 
-          <div className="icon-circle" title="Account">
+          <Link to="/login" className="icon-circle" title="Account">
             <FaUser />
-          </div>
+          </Link>
+
           <div className="icon-section">
               <Link to="/cart" className="icon-circle" title="Cart">
                 <FaShoppingCart />
