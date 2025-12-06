@@ -28,7 +28,7 @@ function Checkout() {
   };
 
   return (
-    <div className="checkout-container">
+    <div className="checkout-container page-transition">
       <h2>CHECKOUT</h2>
       <div className="checkout-card">
         <div className="address-section">
@@ -43,6 +43,7 @@ function Checkout() {
             <thead>
               <tr>
                 <th>Product</th>
+                <th>Variation</th>
                 <th>Unit Price</th>
                 <th>Quantity</th>
                 <th>Subtotal</th>
@@ -59,7 +60,16 @@ function Checkout() {
                     }}
                   >
                     <img src={item.image} alt={item.name} width="50" />
-                    {item.name}
+                    <div>{item.name}</div>
+                  </td>
+                  <td>
+                    {item.selectedVariation ? (
+                      <span style={{ color: "#555", fontWeight: "500" }}>
+                        {item.variationType ? `${item.variationType}: ` : ""}{item.selectedVariation}
+                      </span>
+                    ) : (
+                      <span style={{ color: "#999", fontStyle: "italic" }}>-</span>
+                    )}
                   </td>
                   <td>₱{item.price}</td>
                   <td>{item.quantity}</td>

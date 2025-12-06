@@ -14,26 +14,26 @@ function Categories() {
     navigate(`/product/${productId}`);
   };
 
-  // FIXED: Use process.env.PUBLIC_URL for public folder
+  // Use process.env.PUBLIC_URL for public folder
   const getImagePath = (imagePath) => {
     return process.env.PUBLIC_URL + imagePath;
   };
 
   return (
-    <div className="homepage">
+    <div className="homepage page-transition">
       <section className="featured-section">
         <h2>ALL PRODUCTS</h2>
         <div className="product-grid">
           {productData.map((product) => (
-            <div 
-              key={product.id} 
+            <div
+              key={product.id}
               className="product-card"
               onClick={() => handleProductClick(product.id)}
               style={{ cursor: 'pointer' }}
             >
-              <img 
-                src={getImagePath(product.image)} 
-                alt={product.name} 
+              <img
+                src={getImagePath(product.image)}
+                alt={product.name}
                 onError={(e) => {
                   e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5JbWFnZSBOb3QgRm91bmQ8L3RleHQ+PC9zdmc+';
                 }}

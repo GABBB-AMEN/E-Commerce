@@ -171,17 +171,35 @@ body {
   .product-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
+
   .App {
-  text-align: center;
+    text-align: center;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Open Sans", sans-serif;
+  }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ===== Page Transitions ===== */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-}
+.page-transition {
+  animation: fadeInSlideUp 0.5s ease-out forwards;
 }

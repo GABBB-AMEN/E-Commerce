@@ -13,9 +13,9 @@ const Cart = () => {
 
   useEffect(() => {
     if (location.state?.removeItems) {
-        location.state.removeItems.forEach(item => {
+      location.state.removeItems.forEach(item => {
         removeFromCart(item.id);
-        });
+      });
     }
   }, [location.state, removeFromCart]);
 
@@ -73,7 +73,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="cart-container">
+    <div className="cart-container page-transition">
       <h2 className="cart-title">Shopping Cart</h2>
 
       {cartItems.length === 0 ? (
@@ -92,7 +92,17 @@ const Cart = () => {
                   />
                   <img src={item.image} alt={item.name} className="cart-image" />
                   <div className="cart-details">
-                    <p className="cart-name">{item.name}</p>
+                    <div
+                      onClick={() => navigate(`/product/${item.id}`)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <p className="cart-name">{item.name}</p>
+                      {item.selectedVariation && (
+                        <p className="cart-variation" style={{ fontSize: "0.85rem", color: "#666", marginTop: "4px", textDecoration: "underline" }}>
+                          {item.variationType ? `${item.variationType}: ` : "Variation: "}{item.selectedVariation}
+                        </p>
+                      )}
+                    </div>
                     <p className="cart-price" style={{ color: "#FF7E0D" }}>
                       ₱{item.price}
                     </p>
